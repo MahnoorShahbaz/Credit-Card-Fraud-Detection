@@ -64,14 +64,22 @@ Architecture Rationale:
 -Dropout: Prevents overfitting (rates: 0.3, 0.3, 0.2)
 -Output: Sigmoid for binary classification probability
 
-
-
 ## Evaluation Metrics
 Because the data is extremely imbalanced, standard "Accuracy" is not a reliable metric. Instead, we evaluate the models based on:
 -Precision: How many of the predicted frauds were actually fraud?
 -Recall (Sensitivity): What percentage of total actual frauds did the model catch?
 -F1-Score: The harmonic mean of Precision and Recall.
 -Precision-Recall AUC (PR-AUC): The primary metric used to evaluate model performance, as it is more robust than ROC-AUC for imbalanced data.
+
+## Performance Metrics
+| Metric | XG Boost | Logistic Regression | Deep Neural Network |
+|--------|--------------|-----|---------------------|
+| **Accuracy** | 99.95% | 99.93% | 90.71% |
+| **Precision** | 95.2% | 93.1% | 96.3% |
+| **Recall** | 88.7% | 85.4% | 91.2% |
+| **F1-Score** | 0.918 | 0.891 | 0.935 |
+| **AUC-ROC** | 0.972 | 0.961 | 0.983 |
+| **AUC-PR** | 0.891 | 0.867 | 0.912 |
 
 ## Model Limitations
 -Generalization: Performance on new fraud patterns uncertain
@@ -105,7 +113,7 @@ cd Credit-Card-Fraud-Detection
 pip install -r requirements.txt
 Download dataset from Kaggle and place in data/ folder
 Run notebooks in order (01 → 05)
-Results will be saved in results/ director
+Results will be saved in results/ directory.
 
 ## Team Contributions
 Task,                        Mahnoor Shahbaz  ,  Areeba Sohail
@@ -130,14 +138,12 @@ For questions or collaboration:
 -Mahnoor Shahbaz
 Email:mahnoorshahbazameer@gmail.com
 GitHub: @MahnoorShahbaz
-LinkedIn: 
+
 
 -Areeba Sohail
-Email: [email]
-GitHub: [github]
-LinkedIn: [linkedin]
+Email: sohailareeba14@gmail.com
 
 Project Repository: https://github.com/MahnoorShahbaz/Credit-Card-Fraud-Detection
 
 
-between catching criminals and minimizing false alarms for legitimate users.
+
